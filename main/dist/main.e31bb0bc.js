@@ -592,144 +592,144 @@ var global = arguments[3];
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.addErrorHandler = a;
-exports.checkActivityFunctions = Ot;
-exports.ensureJQuerySupport = ft;
-exports.getAppNames = yt;
-exports.getAppStatus = Tt;
-exports.getMountedApps = Et;
-exports.mountRootParcel = W;
-exports.navigateToUrl = nt;
-exports.pathToActiveWhen = Nt;
-exports.registerApplication = Pt;
-exports.removeErrorHandler = c;
-exports.setBootstrapMaxTime = F;
-exports.setMountMaxTime = J;
-exports.setUnloadMaxTime = Q;
-exports.setUnmountMaxTime = H;
-exports.start = Rt;
-exports.triggerAppChange = Mt;
-exports.unloadApplication = bt;
+exports.addErrorHandler = s;
+exports.checkActivityFunctions = Mt;
+exports.ensureJQuerySupport = gt;
+exports.getAppNames = _t;
+exports.getAppStatus = jt;
+exports.getMountedApps = Nt;
+exports.mountRootParcel = Q;
+exports.navigateToUrl = st;
+exports.pathToActiveWhen = Gt;
+exports.registerApplication = Dt;
+exports.removeErrorHandler = f;
+exports.setBootstrapMaxTime = Y;
+exports.setMountMaxTime = Z;
+exports.setUnloadMaxTime = nt;
+exports.setUnmountMaxTime = tt;
+exports.start = Jt;
+exports.triggerAppChange = $t;
+exports.unloadApplication = Rt;
 exports.UPDATING = exports.UNMOUNTING = exports.SKIP_BECAUSE_BROKEN = exports.NOT_MOUNTED = exports.NOT_LOADED = exports.NOT_BOOTSTRAPPED = exports.MOUNTING = exports.MOUNTED = exports.LOAD_ERROR = exports.LOADING_SOURCE_CODE = exports.BOOTSTRAPPING = void 0;
 
-/* single-spa@5.5.1 - ESM - prod */
+/* single-spa@5.4.0 - ESM - prod */
 var t = Object.freeze({
   __proto__: null,
 
   get start() {
-    return Rt;
+    return Jt;
   },
 
   get ensureJQuerySupport() {
-    return ft;
+    return gt;
   },
 
   get setBootstrapMaxTime() {
-    return F;
+    return Y;
   },
 
   get setMountMaxTime() {
-    return J;
+    return Z;
   },
 
   get setUnmountMaxTime() {
-    return H;
+    return tt;
   },
 
   get setUnloadMaxTime() {
-    return Q;
-  },
-
-  get registerApplication() {
-    return Pt;
-  },
-
-  get getMountedApps() {
-    return Et;
-  },
-
-  get getAppStatus() {
-    return Tt;
-  },
-
-  get unloadApplication() {
-    return bt;
-  },
-
-  get checkActivityFunctions() {
-    return Ot;
-  },
-
-  get getAppNames() {
-    return yt;
-  },
-
-  get pathToActiveWhen() {
-    return Nt;
-  },
-
-  get navigateToUrl() {
     return nt;
   },
 
-  get triggerAppChange() {
+  get registerApplication() {
+    return Dt;
+  },
+
+  get getMountedApps() {
+    return Nt;
+  },
+
+  get getAppStatus() {
+    return jt;
+  },
+
+  get unloadApplication() {
+    return Rt;
+  },
+
+  get checkActivityFunctions() {
     return Mt;
   },
 
+  get getAppNames() {
+    return _t;
+  },
+
+  get pathToActiveWhen() {
+    return Gt;
+  },
+
+  get navigateToUrl() {
+    return st;
+  },
+
+  get triggerAppChange() {
+    return $t;
+  },
+
   get addErrorHandler() {
-    return a;
+    return s;
   },
 
   get removeErrorHandler() {
-    return c;
+    return f;
   },
 
   get mountRootParcel() {
-    return W;
+    return Q;
   },
 
   get NOT_LOADED() {
-    return l;
-  },
-
-  get LOADING_SOURCE_CODE() {
-    return p;
-  },
-
-  get NOT_BOOTSTRAPPED() {
     return h;
   },
 
-  get BOOTSTRAPPING() {
+  get LOADING_SOURCE_CODE() {
     return m;
   },
 
-  get NOT_MOUNTED() {
+  get NOT_BOOTSTRAPPED() {
     return d;
   },
 
-  get MOUNTING() {
+  get BOOTSTRAPPING() {
     return v;
   },
 
-  get UPDATING() {
-    return g;
-  },
-
-  get LOAD_ERROR() {
-    return y;
-  },
-
-  get MOUNTED() {
+  get NOT_MOUNTED() {
     return w;
   },
 
-  get UNMOUNTING() {
+  get MOUNTING() {
+    return g;
+  },
+
+  get UPDATING() {
     return E;
   },
 
+  get LOAD_ERROR() {
+    return O;
+  },
+
+  get MOUNTED() {
+    return y;
+  },
+
+  get UNMOUNTING() {
+    return b;
+  },
+
   get SKIP_BECAUSE_BROKEN() {
-    return T;
+    return P;
   }
 
 });
@@ -742,19 +742,43 @@ function n(t) {
   })(t);
 }
 
-function e(t, n, e) {
+function r(t, n, r) {
   return n in t ? Object.defineProperty(t, n, {
-    value: e,
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : t[n] = e, t;
+  }) : t[n] = r, t;
 }
 
-var r = ("undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {}).CustomEvent,
-    o = function () {
+function e(t) {
+  return function (t) {
+    if (Array.isArray(t)) return o(t);
+  }(t) || function (t) {
+    if ("undefined" != typeof Symbol && Symbol.iterator in Object(t)) return Array.from(t);
+  }(t) || function (t, n) {
+    if (t) {
+      if ("string" == typeof t) return o(t, void 0);
+      var r = Object.prototype.toString.call(t).slice(8, -1);
+      return "Object" === r && t.constructor && (r = t.constructor.name), "Map" === r || "Set" === r ? Array.from(r) : "Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r) ? o(t, void 0) : void 0;
+    }
+  }(t) || function () {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }();
+}
+
+function o(t, n) {
+  (null == n || n > t.length) && (n = t.length);
+
+  for (var r = 0, e = new Array(n); r < n; r++) e[r] = t[r];
+
+  return e;
+}
+
+var i = ("undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {}).CustomEvent,
+    u = function () {
   try {
-    var t = new r("cat", {
+    var t = new i("cat", {
       detail: {
         foo: "bar"
       }
@@ -763,228 +787,252 @@ var r = ("undefined" != typeof globalThis ? globalThis : "undefined" != typeof w
   } catch (t) {}
 
   return !1;
-}() ? r : "undefined" != typeof document && "function" == typeof document.createEvent ? function (t, n) {
-  var e = document.createEvent("CustomEvent");
-  return n ? e.initCustomEvent(t, n.bubbles, n.cancelable, n.detail) : e.initCustomEvent(t, !1, !1, void 0), e;
+}() ? i : "undefined" != typeof document && "function" == typeof document.createEvent ? function (t, n) {
+  var r = document.createEvent("CustomEvent");
+  return n ? r.initCustomEvent(t, n.bubbles, n.cancelable, n.detail) : r.initCustomEvent(t, !1, !1, void 0), r;
 } : function (t, n) {
-  var e = document.createEventObject();
-  return e.type = t, n ? (e.bubbles = Boolean(n.bubbles), e.cancelable = Boolean(n.cancelable), e.detail = n.detail) : (e.bubbles = !1, e.cancelable = !1, e.detail = void 0), e;
+  var r = document.createEventObject();
+  return r.type = t, n ? (r.bubbles = Boolean(n.bubbles), r.cancelable = Boolean(n.cancelable), r.detail = n.detail) : (r.bubbles = !1, r.cancelable = !1, r.detail = void 0), r;
 },
-    i = [];
+    a = [];
 
-function u(t, n, e) {
-  var r = f(t, n, e);
-  i.length ? i.forEach(function (t) {
-    return t(r);
+function c(t, n, r) {
+  var e = p(t, n, r);
+  a.length ? a.forEach(function (t) {
+    return t(e);
   }) : setTimeout(function () {
-    throw r;
+    throw e;
   });
 }
 
-function a(t) {
-  if ("function" != typeof t) throw Error(s(28, !1));
-  i.push(t);
+function s(t) {
+  if ("function" != typeof t) throw Error(l(28, !1));
+  a.push(t);
 }
 
-function c(t) {
-  if ("function" != typeof t) throw Error(s(29, !1));
+function f(t) {
+  if ("function" != typeof t) throw Error(l(29, !1));
   var n = !1;
-  return i = i.filter(function (e) {
-    var r = e === t;
-    return n = n || r, !r;
+  return a = a.filter(function (r) {
+    var e = r === t;
+    return n = n || e, !e;
   }), n;
 }
 
-function s(t, n) {
-  for (var e = arguments.length, r = new Array(e > 2 ? e - 2 : 0), o = 2; o < e; o++) r[o - 2] = arguments[o];
+function l(t, n) {
+  for (var r = arguments.length, e = new Array(r > 2 ? r - 2 : 0), o = 2; o < r; o++) e[o - 2] = arguments[o];
 
-  return "single-spa minified message #".concat(t, ": ").concat(n ? n + " " : "", "See https://single-spa.js.org/error/?code=").concat(t).concat(r.length ? "&arg=".concat(r.join("&arg=")) : "");
+  return "single-spa minified message #".concat(t, ": ").concat(n ? n + " " : "", "See https://single-spa.js.org/error/?code=").concat(t).concat(e.length ? "&arg=".concat(e.join("&arg=")) : "");
 }
 
-function f(t, n, e) {
-  var r,
-      o = "".concat(S(n), " '").concat(b(n), "' died in status ").concat(n.status, ": ");
+function p(t, n, r) {
+  var e,
+      o = "".concat(I(n), " '").concat(U(n), "' died in status ").concat(n.status, ": ");
 
   if (t instanceof Error) {
     try {
       t.message = o + t.message;
     } catch (t) {}
 
-    r = t;
+    e = t;
   } else {
-    console.warn(s(30, !1, n.status, b(n)));
+    console.warn(l(30, !1, n.status, U(n)));
 
     try {
-      r = Error(o + JSON.stringify(t));
+      e = Error(o + JSON.stringify(t));
     } catch (n) {
-      r = t;
+      e = t;
     }
   }
 
-  return r.appOrParcelName = b(n), n.status = e, r;
+  return e.appOrParcelName = U(n), n.status = r, e;
 }
 
-var l = "NOT_LOADED",
-    p = "LOADING_SOURCE_CODE",
-    h = "NOT_BOOTSTRAPPED",
-    m = "BOOTSTRAPPING",
-    d = "NOT_MOUNTED",
-    v = "MOUNTING",
-    w = "MOUNTED",
-    g = "UPDATING",
-    E = "UNMOUNTING",
-    y = "LOAD_ERROR",
-    T = "SKIP_BECAUSE_BROKEN";
-exports.SKIP_BECAUSE_BROKEN = T;
-exports.LOAD_ERROR = y;
-exports.UNMOUNTING = E;
-exports.UPDATING = g;
-exports.MOUNTED = w;
-exports.MOUNTING = v;
-exports.NOT_MOUNTED = d;
-exports.BOOTSTRAPPING = m;
-exports.NOT_BOOTSTRAPPED = h;
-exports.LOADING_SOURCE_CODE = p;
-exports.NOT_LOADED = l;
+var h = "NOT_LOADED",
+    m = "LOADING_SOURCE_CODE",
+    d = "NOT_BOOTSTRAPPED",
+    v = "BOOTSTRAPPING",
+    w = "NOT_MOUNTED",
+    g = "MOUNTING",
+    y = "MOUNTED",
+    E = "UPDATING",
+    b = "UNMOUNTING",
+    O = "LOAD_ERROR",
+    P = "SKIP_BECAUSE_BROKEN";
+exports.SKIP_BECAUSE_BROKEN = P;
+exports.LOAD_ERROR = O;
+exports.UNMOUNTING = b;
+exports.UPDATING = E;
+exports.MOUNTED = y;
+exports.MOUNTING = g;
+exports.NOT_MOUNTED = w;
+exports.BOOTSTRAPPING = v;
+exports.NOT_BOOTSTRAPPED = d;
+exports.LOADING_SOURCE_CODE = m;
+exports.NOT_LOADED = h;
 
-function P(t) {
-  return t.status === w;
-}
-
-function O(t) {
-  try {
-    return t.activeWhen(window.location);
-  } catch (n) {
-    return u(n, t, T), !1;
-  }
-}
-
-function b(t) {
-  return t.name;
+function T(t) {
+  return t.status === y;
 }
 
 function A(t) {
-  return Boolean(t.unmountThisParcel);
+  return !T(t);
 }
 
 function S(t) {
-  return A(t) ? "parcel" : "application";
+  return t.status !== h && t.status !== m && t.status !== O;
 }
 
-function N() {
+function N(t) {
+  return !S(t);
+}
+
+function _(t) {
+  try {
+    return t.activeWhen(window.location);
+  } catch (n) {
+    return c(n, t, P), !1;
+  }
+}
+
+function j(t) {
+  return !_(t);
+}
+
+function D(t) {
+  return t !== P && (!t || t.status !== P);
+}
+
+function M(t) {
+  return t.status !== O || new Date().getTime() - t.loadErrorTime >= 200;
+}
+
+function U(t) {
+  return t.name;
+}
+
+function L(t) {
+  return Boolean(t.unmountThisParcel);
+}
+
+function I(t) {
+  return L(t) ? "parcel" : "application";
+}
+
+function R() {
   for (var t = arguments.length - 1; t > 0; t--) for (var n in arguments[t]) "__proto__" !== n && (arguments[t - 1][n] = arguments[t][n]);
 
   return arguments[0];
 }
 
-function _(t, n) {
-  for (var e = 0; e < t.length; e++) if (n(t[e])) return t[e];
+function x(t, n) {
+  for (var r = 0; r < t.length; r++) if (n(t[r])) return t[r];
 
   return null;
 }
 
-function D(t) {
-  return t && ("function" == typeof t || (n = t, Array.isArray(n) && !_(n, function (t) {
+function B(t) {
+  return t && ("function" == typeof t || (n = t, Array.isArray(n) && !x(n, function (t) {
     return "function" != typeof t;
   })));
   var n;
 }
 
-function M(t, n) {
-  var e = t[n] || [];
-  0 === (e = Array.isArray(e) ? e : [e]).length && (e = [function () {
+function G(t, n) {
+  var r = t[n] || [];
+  0 === (r = Array.isArray(r) ? r : [r]).length && (r = [function () {
     return Promise.resolve();
   }]);
-  var r = S(t),
-      o = b(t);
+  var e = I(t),
+      o = U(t);
   return function (t) {
-    return e.reduce(function (e, i, u) {
-      return e.then(function () {
-        var e = i(t);
-        return U(e) ? e : Promise.reject(s(15, !1, r, o, n, u));
+    return r.reduce(function (r, i, u) {
+      return r.then(function () {
+        var r = i(t);
+        return C(r) ? r : Promise.reject(l(15, !1, e, o, n, u));
       });
     }, Promise.resolve());
   };
 }
 
-function U(t) {
+function C(t) {
   return t && "function" == typeof t.then && "function" == typeof t.catch;
 }
 
-function j(t, n) {
+function W(t, n) {
   return Promise.resolve().then(function () {
-    return t.status !== h ? t : (t.status = m, V(t, "bootstrap").then(function () {
-      return t.status = d, t;
-    }).catch(function (e) {
-      if (n) throw f(e, t, T);
-      return u(e, t, T), t;
+    return t.status !== d ? t : (t.status = v, rt(t, "bootstrap").then(function () {
+      return t.status = w, t;
+    }).catch(function (r) {
+      if (n) throw p(r, t, P);
+      return c(r, t, P), t;
     }));
   });
 }
 
-function L(t, n) {
+function $(t, n) {
   return Promise.resolve().then(function () {
-    if (t.status !== w) return t;
-    t.status = E;
-    var e = Object.keys(t.parcels).map(function (n) {
+    if (t.status !== y) return t;
+    t.status = b;
+    var r = Object.keys(t.parcels).map(function (n) {
       return t.parcels[n].unmountThisParcel();
     });
-    return Promise.all(e).then(r, function (e) {
-      return r().then(function () {
-        var r = Error(e.message);
-        if (n) throw f(r, t, T);
-        u(r, t, T);
+    return Promise.all(r).then(e, function (r) {
+      return e().then(function () {
+        var e = Error(r.message);
+        if (n) throw p(e, t, P);
+        c(e, t, P);
       });
     }).then(function () {
       return t;
     });
 
-    function r() {
-      return V(t, "unmount").then(function () {
-        t.status = d;
-      }).catch(function (e) {
-        if (n) throw f(e, t, T);
-        u(e, t, T);
+    function e() {
+      return rt(t, "unmount").then(function () {
+        t.status = w;
+      }).catch(function (r) {
+        if (n) throw p(r, t, P);
+        c(r, t, P);
       });
     }
   });
 }
 
-var R = !1,
-    I = !1;
+var k = !1,
+    K = !1;
 
-function x(t, n) {
+function F(t, n) {
   return Promise.resolve().then(function () {
-    return t.status !== d ? t : (R || (window.dispatchEvent(new o("single-spa:before-first-mount")), R = !0), V(t, "mount").then(function () {
-      return t.status = w, I || (window.dispatchEvent(new o("single-spa:first-mount")), I = !0), t;
-    }).catch(function (e) {
-      return t.status = w, L(t, !0).then(r, r);
+    return t.status !== w ? t : (k || (window.dispatchEvent(new u("single-spa:before-first-mount")), k = !0), rt(t, "mount").then(function () {
+      return t.status = y, K || (window.dispatchEvent(new u("single-spa:first-mount")), K = !0), t;
+    }).catch(function (r) {
+      return t.status = y, $(t, !0).then(e, e);
 
-      function r() {
-        if (n) throw f(e, t, T);
-        return u(e, t, T), t;
+      function e() {
+        if (n) throw p(r, t, P);
+        return c(r, t, P), t;
       }
     }));
   });
 }
 
-var B = 0,
-    G = {
+var J = 0,
+    H = {
   parcels: {}
 };
 
-function W() {
-  return C.apply(G, arguments);
+function Q() {
+  return V.apply(H, arguments);
 }
 
-function C(t, e) {
-  var r = this;
-  if (!t || "object" !== n(t) && "function" != typeof t) throw Error(s(2, !1));
-  if (t.name && "string" != typeof t.name) throw Error(s(3, !1, n(t.name)));
-  if ("object" !== n(e)) throw Error(s(4, !1, name, n(e)));
-  if (!e.domElement) throw Error(s(5, !1, name));
+function V(t, r) {
+  var e = this;
+  if (!t || "object" !== n(t) && "function" != typeof t) throw Error(l(2, !1));
+  if (t.name && "string" != typeof t.name) throw Error(l(3, !1, n(t.name)));
+  if ("object" !== n(r)) throw Error(l(4, !1, name, n(r)));
+  if (!r.domElement) throw Error(l(5, !1, name));
   var o,
-      i = B++,
+      i = J++,
       u = "function" == typeof t,
       a = u ? t : function () {
     return Promise.resolve(t);
@@ -992,95 +1040,95 @@ function C(t, e) {
       c = {
     id: i,
     parcels: {},
-    status: u ? p : h,
-    customProps: e,
-    parentName: b(r),
+    status: u ? m : d,
+    customProps: r,
+    parentName: U(e),
     unmountThisParcel: function () {
-      if (c.status !== w) throw Error(s(6, !1, name, c.status));
-      return L(c, !0).then(function (t) {
-        return c.parentName && delete r.parcels[c.id], t;
+      if (c.status !== y) throw Error(l(6, !1, name, c.status));
+      return $(c, !0).then(function (t) {
+        return c.parentName && delete e.parcels[c.id], t;
       }).then(function (t) {
-        return m(t), t;
+        return f(t), t;
       }).catch(function (t) {
-        throw c.status = T, v(t), t;
+        throw c.status = P, h(t), t;
       });
     }
   };
-  r.parcels[i] = c;
-  var l = a();
-  if (!l || "function" != typeof l.then) throw Error(s(7, !1));
-  var m,
-      v,
-      E = (l = l.then(function (t) {
-    if (!t) throw Error(s(8, !1));
+  e.parcels[i] = c;
+  var s = a();
+  if (!s || "function" != typeof s.then) throw Error(l(7, !1));
+  var f,
+      h,
+      v = (s = s.then(function (t) {
+    if (!t) throw Error(l(8, !1));
     var n = t.name || "parcel-".concat(i);
-    if (!D(t.bootstrap)) throw Error(s(9, !1, n));
-    if (!D(t.mount)) throw Error(s(10, !1, n));
-    if (!D(t.unmount)) throw Error(s(11, !1, n));
-    if (t.update && !D(t.update)) throw Error(s(12, !1, n));
-    var e = M(t, "bootstrap"),
-        r = M(t, "mount"),
-        u = M(t, "unmount");
-    c.status = h, c.name = n, c.bootstrap = e, c.mount = r, c.unmount = u, c.timeouts = q(t.timeouts), t.update && (c.update = M(t, "update"), o.update = function (t) {
-      return c.customProps = t, k(function (t) {
+    if (!B(t.bootstrap)) throw Error(l(9, !1, n));
+    if (!B(t.mount)) throw Error(l(10, !1, n));
+    if (!B(t.unmount)) throw Error(l(11, !1, n));
+    if (t.update && !B(t.update)) throw Error(l(12, !1, n));
+    var r = G(t, "bootstrap"),
+        e = G(t, "mount"),
+        u = G(t, "unmount");
+    c.status = d, c.name = n, c.bootstrap = r, c.mount = e, c.unmount = u, c.timeouts = et(t.timeouts), t.update && (c.update = G(t, "update"), o.update = function (t) {
+      return c.customProps = t, q(function (t) {
         return Promise.resolve().then(function () {
-          if (t.status !== w) throw Error(s(32, !1, b(t)));
-          return t.status = g, V(t, "update").then(function () {
-            return t.status = w, t;
+          if (t.status !== y) throw Error(l(32, !1, U(t)));
+          return t.status = E, rt(t, "update").then(function () {
+            return t.status = y, t;
           }).catch(function (n) {
-            throw f(n, t, T);
+            throw p(n, t, P);
           });
         });
       }(c));
     });
   })).then(function () {
-    return j(c, !0);
+    return W(c, !0);
   }),
-      y = E.then(function () {
-    return x(c, !0);
+      g = v.then(function () {
+    return F(c, !0);
   }),
-      P = new Promise(function (t, n) {
-    m = t, v = n;
+      b = new Promise(function (t, n) {
+    f = t, h = n;
   });
   return o = {
     mount: function () {
-      return k(Promise.resolve().then(function () {
-        if (c.status !== d) throw Error(s(13, !1, name, c.status));
-        return r.parcels[i] = c, x(c);
+      return q(Promise.resolve().then(function () {
+        if (c.status !== w) throw Error(l(13, !1, name, c.status));
+        return e.parcels[i] = c, F(c);
       }));
     },
     unmount: function () {
-      return k(c.unmountThisParcel());
+      return q(c.unmountThisParcel());
     },
     getStatus: function () {
       return c.status;
     },
-    loadPromise: k(l),
-    bootstrapPromise: k(E),
-    mountPromise: k(y),
-    unmountPromise: k(P)
+    loadPromise: q(s),
+    bootstrapPromise: q(v),
+    mountPromise: q(g),
+    unmountPromise: q(b)
   };
 }
 
-function k(t) {
+function q(t) {
   return t.then(function () {
     return null;
   });
 }
 
-function $(e) {
-  var r = b(e),
-      o = "function" == typeof e.customProps ? e.customProps(r, window.location) : e.customProps;
-  ("object" !== n(o) || null === o || Array.isArray(o)) && (o = {}, console.warn(s(40, !1), r, o));
-  var i = N({}, o, {
-    name: r,
-    mountParcel: C.bind(e),
+function z(r) {
+  var e = U(r),
+      o = "function" == typeof r.customProps ? r.customProps(e, window.location) : r.customProps;
+  ("object" !== n(o) || null === o || Array.isArray(o)) && (o = {}, console.warn(l(40, !1), e, o));
+  var i = R({}, o, {
+    name: e,
+    mountParcel: V.bind(r),
     singleSpa: t
   });
-  return A(e) && (i.unmountSelf = e.unmountThisParcel), i;
+  return L(r) && (i.unmountSelf = r.unmountThisParcel), i;
 }
 
-var K = {
+var X = {
   bootstrap: {
     millis: 4e3,
     dieOnTimeout: !1,
@@ -1108,137 +1156,137 @@ var K = {
   }
 };
 
-function F(t, n, e) {
-  if ("number" != typeof t || t <= 0) throw Error(s(16, !1));
-  K.bootstrap = {
+function Y(t, n, r) {
+  if ("number" != typeof t || t <= 0) throw Error(l(16, !1));
+  X.bootstrap = {
     millis: t,
     dieOnTimeout: n,
-    warningMillis: e || 1e3
+    warningMillis: r || 1e3
   };
 }
 
-function J(t, n, e) {
-  if ("number" != typeof t || t <= 0) throw Error(s(17, !1));
-  K.mount = {
+function Z(t, n, r) {
+  if ("number" != typeof t || t <= 0) throw Error(l(17, !1));
+  X.mount = {
     millis: t,
     dieOnTimeout: n,
-    warningMillis: e || 1e3
+    warningMillis: r || 1e3
   };
 }
 
-function H(t, n, e) {
-  if ("number" != typeof t || t <= 0) throw Error(s(18, !1));
-  K.unmount = {
+function tt(t, n, r) {
+  if ("number" != typeof t || t <= 0) throw Error(l(18, !1));
+  X.unmount = {
     millis: t,
     dieOnTimeout: n,
-    warningMillis: e || 1e3
+    warningMillis: r || 1e3
   };
 }
 
-function Q(t, n, e) {
-  if ("number" != typeof t || t <= 0) throw Error(s(19, !1));
-  K.unload = {
+function nt(t, n, r) {
+  if ("number" != typeof t || t <= 0) throw Error(l(19, !1));
+  X.unload = {
     millis: t,
     dieOnTimeout: n,
-    warningMillis: e || 1e3
+    warningMillis: r || 1e3
   };
 }
 
-function V(t, n) {
-  var e = t.timeouts[n],
-      r = e.warningMillis,
-      o = S(t);
+function rt(t, n) {
+  var r = t.timeouts[n],
+      e = r.warningMillis,
+      o = I(t);
   return new Promise(function (i, u) {
     var a = !1,
         c = !1;
-    t[n]($(t)).then(function (t) {
+    t[n](z(t)).then(function (t) {
       a = !0, i(t);
     }).catch(function (t) {
       a = !0, u(t);
     }), setTimeout(function () {
-      return l(1);
-    }, r), setTimeout(function () {
-      return l(!0);
-    }, e.millis);
-    var f = s(31, !1, n, o, b(t), e.millis);
+      return f(1);
+    }, e), setTimeout(function () {
+      return f(!0);
+    }, r.millis);
+    var s = l(31, !1, n, o, U(t), r.millis);
 
-    function l(t) {
-      if (!a) if (!0 === t) c = !0, e.dieOnTimeout ? u(Error(f)) : console.error(f);else if (!c) {
+    function f(t) {
+      if (!a) if (!0 === t) c = !0, r.dieOnTimeout ? u(Error(s)) : console.error(s);else if (!c) {
         var n = t,
-            o = n * r;
-        console.warn(f), o + r < e.millis && setTimeout(function () {
-          return l(n + 1);
-        }, r);
+            o = n * e;
+        console.warn(s), o + e < r.millis && setTimeout(function () {
+          return f(n + 1);
+        }, e);
       }
     }
   });
 }
 
-function q(t) {
+function et(t) {
   var n = {};
 
-  for (var e in K) n[e] = N({}, K[e], t && t[e] || {});
+  for (var r in X) n[r] = R({}, X[r], t && t[r] || {});
 
   return n;
 }
 
-function z(t) {
+function ot(t) {
   return Promise.resolve().then(function () {
-    return t.loadPromise ? t.loadPromise : t.status !== l && t.status !== y ? t : (t.status = p, t.loadPromise = Promise.resolve().then(function () {
-      var o = t.loadApp($(t));
-      if (!U(o)) throw r = !0, Error(s(33, !1, b(t)));
-      return o.then(function (r) {
+    return t.loadPromise ? t.loadPromise : t.status !== h && t.status !== O ? t : (t.status = m, t.loadPromise = Promise.resolve().then(function () {
+      var o = t.loadApp(z(t));
+      if (!C(o)) throw e = !0, Error(l(33, !1, U(t)));
+      return o.then(function (e) {
         var o;
-        t.loadErrorTime = null, "object" !== n(e = r) && (o = 34), D(e.bootstrap) || (o = 35), D(e.mount) || (o = 36), D(e.unmount) || (o = 37);
-        var i = S(e);
+        t.loadErrorTime = null, "object" !== n(r = e) && (o = 34), B(r.bootstrap) || (o = 35), B(r.mount) || (o = 36), B(r.unmount) || (o = 37);
+        var i = I(r);
 
         if (o) {
-          var a;
+          var u;
 
           try {
-            a = JSON.stringify(e);
+            u = JSON.stringify(r);
           } catch (t) {}
 
-          return console.error(s(o, !1, i, b(t), a), e), u(void 0, t, T), t;
+          return console.error(l(o, !1, i, U(t), u), r), c(void 0, t, P), t;
         }
 
-        return e.devtools && e.devtools.overlays && (t.devtools.overlays = N({}, t.devtools.overlays, e.devtools.overlays)), t.status = h, t.bootstrap = M(e, "bootstrap"), t.mount = M(e, "mount"), t.unmount = M(e, "unmount"), t.unload = M(e, "unload"), t.timeouts = q(e.timeouts), delete t.loadPromise, t;
+        return r.devtools && r.devtools.overlays && (t.devtools.overlays = R({}, t.devtools.overlays, r.devtools.overlays)), t.status = d, t.bootstrap = G(r, "bootstrap"), t.mount = G(r, "mount"), t.unmount = G(r, "unmount"), t.unload = G(r, "unload"), t.timeouts = et(r.timeouts), delete t.loadPromise, t;
       });
     }).catch(function (n) {
-      var e;
-      return delete t.loadPromise, r ? e = T : (e = y, t.loadErrorTime = new Date().getTime()), u(n, t, e), t;
+      var r;
+      return delete t.loadPromise, e ? r = P : (r = O, t.loadErrorTime = new Date().getTime()), c(n, t, r), t;
     }));
-    var e, r;
+    var r, e;
   });
 }
 
-var X,
-    Y = "undefined" != typeof window,
-    Z = {
+var it,
+    ut = "undefined" != typeof window,
+    at = {
   hashchange: [],
   popstate: []
 },
-    tt = ["hashchange", "popstate"];
+    ct = ["hashchange", "popstate"];
 
-function nt(t) {
+function st(t) {
   var n;
   if ("string" == typeof t) n = t;else if (this && this.href) n = this.href;else {
-    if (!(t && t.currentTarget && t.currentTarget.href && t.preventDefault)) throw Error(s(14, !1));
+    if (!(t && t.currentTarget && t.currentTarget.href && t.preventDefault)) throw Error(l(14, !1));
     n = t.currentTarget.href, t.preventDefault();
   }
-  var e = ct(window.location.href),
-      r = ct(n);
-  0 === n.indexOf("#") ? window.location.hash = r.hash : e.host !== r.host && r.host ? window.location.href = n : r.pathname === e.pathname && r.search === e.search ? window.location.hash = r.hash : window.history.pushState(null, null, n);
+  var r = vt(window.location.href),
+      e = vt(n);
+  0 === n.indexOf("#") ? window.location.hash = e.hash : r.host !== e.host && e.host ? window.location.href = n : e.pathname === r.pathname && e.search === r.search ? window.location.hash = e.hash : window.history.pushState(null, null, n);
 }
 
-function et(t) {
+function ft(t) {
   var n = this;
 
   if (t) {
-    var e = t[0].type;
-    tt.indexOf(e) >= 0 && Z[e].forEach(function (e) {
+    var r = t[0].type;
+    ct.indexOf(r) >= 0 && at[r].forEach(function (r) {
       try {
-        e.apply(n, t);
+        r.apply(n, t);
       } catch (t) {
         setTimeout(function () {
           throw t;
@@ -1248,166 +1296,137 @@ function et(t) {
   }
 }
 
-function rt() {
-  Ut([], arguments);
+function lt() {
+  kt([], arguments);
 }
 
-function ot(t, n) {
+function pt(t, n) {
   return function () {
-    var e = window.location.href,
-        r = t.apply(this, arguments),
+    var r = window.location.href,
+        e = t.apply(this, arguments),
         o = window.location.href;
-    return X && e === o || rt(it(window.history.state, n)), r;
+    return it && r === o || lt(ht(window.history.state, n)), e;
   };
 }
 
-function it(t, n) {
-  var e;
+function ht(t, n) {
+  var r;
 
   try {
-    e = new PopStateEvent("popstate", {
+    r = new PopStateEvent("popstate", {
       state: t
     });
   } catch (n) {
-    (e = document.createEvent("PopStateEvent")).initPopStateEvent("popstate", !1, !1, t);
+    (r = document.createEvent("PopStateEvent")).initPopStateEvent("popstate", !1, !1, t);
   }
 
-  return e.singleSpa = !0, e.singleSpaTrigger = n, e;
+  return r.singleSpa = !0, r.singleSpaTrigger = n, r;
 }
 
-if (Y) {
-  window.addEventListener("hashchange", rt), window.addEventListener("popstate", rt);
-  var ut = window.addEventListener,
-      at = window.removeEventListener;
+if (ut) {
+  window.addEventListener("hashchange", lt), window.addEventListener("popstate", lt);
+  var mt = window.addEventListener,
+      dt = window.removeEventListener;
   window.addEventListener = function (t, n) {
-    if (!("function" == typeof n && tt.indexOf(t) >= 0) || _(Z[t], function (t) {
+    if (!("function" == typeof n && ct.indexOf(t) >= 0) || x(at[t], function (t) {
       return t === n;
-    })) return ut.apply(this, arguments);
-    Z[t].push(n);
+    })) return mt.apply(this, arguments);
+    at[t].push(n);
   }, window.removeEventListener = function (t, n) {
-    if (!("function" == typeof n && tt.indexOf(t) >= 0)) return at.apply(this, arguments);
-    Z[t] = Z[t].filter(function (t) {
+    if (!("function" == typeof n && ct.indexOf(t) >= 0)) return dt.apply(this, arguments);
+    at[t] = at[t].filter(function (t) {
       return t !== n;
     });
-  }, window.history.pushState = ot(window.history.pushState, "pushState"), window.history.replaceState = ot(window.history.replaceState, "replaceState"), window.singleSpaNavigate = nt;
+  }, window.history.pushState = pt(window.history.pushState, "pushState"), window.history.replaceState = pt(window.history.replaceState, "replaceState"), window.singleSpaNavigate = st;
 }
 
-function ct(t) {
+function vt(t) {
   var n = document.createElement("a");
   return n.href = t, n;
 }
 
-var st = !1;
+var wt = !1;
 
-function ft() {
+function gt() {
   var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.jQuery;
 
-  if (t || window.$ && window.$.fn && window.$.fn.jquery && (t = window.$), t && !st) {
+  if (t || window.$ && window.$.fn && window.$.fn.jquery && (t = window.$), t && !wt) {
     var n = t.fn.on,
-        e = t.fn.off;
-    t.fn.on = function (t, e) {
-      return lt.call(this, n, window.addEventListener, t, e, arguments);
+        r = t.fn.off;
+    t.fn.on = function (t, r) {
+      return yt.call(this, n, window.addEventListener, t, r, arguments);
     }, t.fn.off = function (t, n) {
-      return lt.call(this, e, window.removeEventListener, t, n, arguments);
-    }, st = !0;
+      return yt.call(this, r, window.removeEventListener, t, n, arguments);
+    }, wt = !0;
   }
 }
 
-function lt(t, n, e, r, o) {
-  return "string" != typeof e ? t.apply(this, o) : (e.split(/\s+/).forEach(function (t) {
-    tt.indexOf(t) >= 0 && (n(t, r), e = e.replace(t, ""));
-  }), "" === e.trim() ? this : t.apply(this, o));
+function yt(t, n, r, e, o) {
+  return "string" != typeof r ? t.apply(this, o) : (r.split(/\s+/).forEach(function (t) {
+    ct.indexOf(t) >= 0 && (n(t, e), r = r.replace(t, ""));
+  }), "" === r.trim() ? this : t.apply(this, o));
 }
 
-var pt = {};
+var Et = {};
 
-function ht(t) {
+function bt(t) {
   return Promise.resolve().then(function () {
-    var n = pt[b(t)];
-    return n ? t.status === l ? (mt(t, n), t) : "UNLOADING" === t.status ? n.promise.then(function () {
+    var n = Et[U(t)];
+    return n ? t.status === h ? (Ot(t, n), t) : "UNLOADING" === t.status ? n.promise.then(function () {
       return t;
-    }) : t.status !== d ? t : (t.status = "UNLOADING", V(t, "unload").then(function () {
-      return mt(t, n), t;
-    }).catch(function (e) {
-      return function (t, n, e) {
-        delete pt[b(t)], delete t.bootstrap, delete t.mount, delete t.unmount, delete t.unload, u(e, t, T), n.reject(e);
-      }(t, n, e), t;
+    }) : t.status !== w ? t : (t.status = "UNLOADING", rt(t, "unload").then(function () {
+      return Ot(t, n), t;
+    }).catch(function (r) {
+      return function (t, n, r) {
+        delete Et[U(t)], delete t.bootstrap, delete t.mount, delete t.unmount, delete t.unload, c(r, t, P), n.reject(r);
+      }(t, n, r), t;
     })) : t;
   });
 }
 
-function mt(t, n) {
-  delete pt[b(t)], delete t.bootstrap, delete t.mount, delete t.unmount, delete t.unload, t.status = l, n.resolve();
+function Ot(t, n) {
+  delete Et[U(t)], delete t.bootstrap, delete t.mount, delete t.unmount, delete t.unload, t.status = h, n.resolve();
 }
 
-function dt(t, n, e, r) {
-  pt[b(t)] = {
+function Pt(t, n, r, e) {
+  Et[U(t)] = {
     app: t,
-    resolve: e,
-    reject: r
-  }, Object.defineProperty(pt[b(t)], "promise", {
+    resolve: r,
+    reject: e
+  }, Object.defineProperty(Et[U(t)], "promise", {
     get: n
   });
 }
 
-function vt(t) {
-  return pt[t];
-}
-
-var wt = [];
-
-function gt() {
-  var t = [],
-      n = [],
-      e = [],
-      r = [],
-      o = new Date().getTime();
-  return wt.forEach(function (i) {
-    var u = i.status !== T && O(i);
-
-    switch (i.status) {
-      case y:
-        o - i.loadErrorTime >= 200 && e.push(i);
-        break;
-
-      case l:
-        u && e.push(i);
-        break;
-
-      case h:
-      case d:
-        !u && vt(b(i)) ? t.push(i) : u && r.push(i);
-        break;
-
-      case w:
-        u || n.push(i);
-    }
-  }), {
-    appsToUnload: t,
-    appsToUnmount: n,
-    appsToLoad: e,
-    appsToMount: r
-  };
-}
-
-function Et() {
-  return wt.filter(P).map(b);
-}
-
-function yt() {
-  return wt.map(b);
-}
-
 function Tt(t) {
-  var n = _(wt, function (n) {
-    return b(n) === t;
-  });
+  return Et[t];
+}
 
+function At() {
+  return Object.keys(Et).map(function (t) {
+    return Et[t].app;
+  }).filter(A);
+}
+
+var St = [];
+
+function Nt() {
+  return St.filter(T).map(U);
+}
+
+function _t() {
+  return St.map(U);
+}
+
+function jt(t) {
+  var n = x(St, function (n) {
+    return U(n) === t;
+  });
   return n ? n.status : null;
 }
 
-function Pt(t, e, r, o) {
-  var i = function (t, e, r, o) {
+function Dt(t, r, e, o) {
+  var i = function (t, r, e, o) {
     var i,
         u = {
       name: null,
@@ -1416,46 +1435,46 @@ function Pt(t, e, r, o) {
       customProps: null
     };
     return "object" === n(t) ? (function (t) {
-      if (Array.isArray(t) || null === t) throw Error(s(39, !1));
-      var e = ["name", "app", "activeWhen", "customProps"],
-          r = Object.keys(t).reduce(function (t, n) {
-        return e.indexOf(n) >= 0 ? t : t.concat(n);
+      if (Array.isArray(t) || null === t) throw Error(l(39, !1));
+      var r = ["name", "app", "activeWhen", "customProps"],
+          e = Object.keys(t).reduce(function (t, n) {
+        return r.includes(n) ? t : t.concat(n);
       }, []);
-      if (0 !== r.length) throw Error(s(38, !1, e.join(", "), r.join(", ")));
-      if ("string" != typeof t.name || 0 === t.name.length) throw Error(s(20, !1));
-      if ("object" !== n(t.app) && "function" != typeof t.app) throw Error(s(20, !1));
+      if (0 !== e.length) throw Error(l(38, !1, r.join(", "), e.join(", ")));
+      if ("string" != typeof t.name || 0 === t.name.length) throw Error(l(20, !1));
+      if ("object" !== n(t.app) && "function" != typeof t.app) throw Error(l(20, !1));
 
       var o = function (t) {
         return "string" == typeof t || "function" == typeof t;
       };
 
-      if (!(o(t.activeWhen) || Array.isArray(t.activeWhen) && t.activeWhen.every(o))) throw Error(s(24, !1));
-      if (!St(t.customProps)) throw Error(s(22, !1));
-    }(t), u.name = t.name, u.loadApp = t.app, u.activeWhen = t.activeWhen, u.customProps = t.customProps) : (function (t, n, e, r) {
-      if ("string" != typeof t || 0 === t.length) throw Error(s(20, !1));
-      if (!n) throw Error(s(23, !1));
-      if ("function" != typeof e) throw Error(s(24, !1));
-      if (!St(r)) throw Error(s(22, !1));
-    }(t, e, r, o), u.name = t, u.loadApp = e, u.activeWhen = r, u.customProps = o), u.loadApp = "function" != typeof (i = u.loadApp) ? function () {
+      if (!(o(t.activeWhen) || Array.isArray(t.activeWhen) && t.activeWhen.every(o))) throw Error(l(24, !1));
+      if (!Bt(t.customProps)) throw Error(l(22, !1));
+    }(t), u.name = t.name, u.loadApp = t.app, u.activeWhen = t.activeWhen, u.customProps = t.customProps) : (function (t, n, r, e) {
+      if ("string" != typeof t || 0 === t.length) throw Error(l(20, !1));
+      if (!n) throw Error(l(23, !1));
+      if ("function" != typeof r) throw Error(l(24, !1));
+      if (!Bt(e)) throw Error(l(22, !1));
+    }(t, r, e, o), u.name = t, u.loadApp = r, u.activeWhen = e, u.customProps = o), u.loadApp = "function" != typeof (i = u.loadApp) ? function () {
       return Promise.resolve(i);
     } : i, u.customProps = function (t) {
       return t || {};
     }(u.customProps), u.activeWhen = function (t) {
       var n = Array.isArray(t) ? t : [t];
       return n = n.map(function (t) {
-        return "function" == typeof t ? t : Nt(t);
+        return "function" == typeof t ? t : Gt(t);
       }), function (t) {
         return n.some(function (n) {
           return n(t);
         });
       };
     }(u.activeWhen), u;
-  }(t, e, r, o);
+  }(t, r, e, o);
 
-  if (-1 !== yt().indexOf(i.name)) throw Error(s(21, !1, i.name));
-  wt.push(N({
+  if (-1 !== _t().indexOf(i.name)) throw Error(l(21, !1, i.name));
+  St.push(R({
     loadErrorTime: null,
-    status: l,
+    status: h,
     parcels: {},
     devtools: {
       overlays: {
@@ -1463,252 +1482,251 @@ function Pt(t, e, r, o) {
         selectors: []
       }
     }
-  }, i)), Y && (ft(), Ut());
+  }, i)), ut && (gt(), kt());
 }
 
-function Ot() {
-  var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location;
-  return wt.filter(function (n) {
+function Mt(t) {
+  return St.filter(function (n) {
     return n.activeWhen(t);
-  }).map(b);
+  }).map(U);
 }
 
-function bt(t) {
+function Ut() {
+  return St.filter(D).filter(M).filter(N).filter(_);
+}
+
+function Lt() {
+  return St.filter(D).filter(T).filter(j);
+}
+
+function It() {
+  return St.filter(D).filter(A).filter(S).filter(_);
+}
+
+function Rt(t) {
   var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
     waitForUnmount: !1
   };
-  if ("string" != typeof t) throw Error(s(26, !1));
-
-  var e = _(wt, function (n) {
-    return b(n) === t;
+  if ("string" != typeof t) throw Error(l(26, !1));
+  var r = x(St, function (n) {
+    return U(n) === t;
   });
-
-  if (!e) throw Error(s(27, !1, t));
-  var r,
-      o = vt(b(e));
+  if (!r) throw Error(l(27, !1, t));
+  var e,
+      o = Tt(U(r));
 
   if (n && n.waitForUnmount) {
     if (o) return o.promise;
     var i = new Promise(function (t, n) {
-      dt(e, function () {
+      Pt(r, function () {
         return i;
       }, t, n);
     });
     return i;
   }
 
-  return o ? (r = o.promise, At(e, o.resolve, o.reject)) : r = new Promise(function (t, n) {
-    dt(e, function () {
-      return r;
-    }, t, n), At(e, t, n);
-  }), r;
+  return o ? (e = o.promise, xt(r, o.resolve, o.reject)) : e = new Promise(function (t, n) {
+    Pt(r, function () {
+      return e;
+    }, t, n), xt(r, t, n);
+  }), e;
 }
 
-function At(t, n, e) {
-  L(t).then(ht).then(function () {
+function xt(t, n, r) {
+  $(t).then(bt).then(function () {
     n(), setTimeout(function () {
-      Ut();
+      kt();
     });
-  }).catch(e);
+  }).catch(r);
 }
 
-function St(t) {
+function Bt(t) {
   return !t || "function" == typeof t || "object" === n(t) && null !== t && !Array.isArray(t);
 }
 
-function Nt(t) {
+function Gt(t) {
   var n = function (t) {
-    for (var n = 0, e = !1, r = "^", o = 0; o < t.length; o++) {
+    for (var n = 0, r = !1, e = "^", o = 0; o < t.length; o++) {
       var i = t[o];
-      (!e && ":" === i || e && "/" === i) && u(o);
+      (!r && ":" === i || r && "/" === i) && u(o);
     }
 
-    return u(t.length), new RegExp(r, "i");
+    return u(t.length), new RegExp(e, "i");
 
     function u(o) {
       var i = t.slice(n, o).replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
-      r += e ? "[^/]+/?" : i, e = !e, n = o;
+      e += r ? "[^/]+/?" : i, r = !r, n = o;
     }
   }(t);
 
   return function (t) {
-    var e = t.href.replace(t.origin, "");
-    return n.test(e);
+    var r = t.href.replace(t.origin, "");
+    return n.test(r);
   };
 }
 
-var _t = !1,
-    Dt = [];
+var Ct = !1,
+    Wt = [];
 
-function Mt() {
-  return Ut();
+function $t() {
+  return kt();
 }
 
-function Ut() {
+function kt() {
   var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
       n = arguments.length > 1 ? arguments[1] : void 0;
-  if (_t) return new Promise(function (t, e) {
-    Dt.push({
+  if (Ct) return new Promise(function (t, r) {
+    Wt.push({
       resolve: t,
-      reject: e,
+      reject: r,
       eventArguments: n
     });
   });
-  var r,
-      i = gt(),
-      u = i.appsToUnload,
-      a = i.appsToUnmount,
-      c = i.appsToLoad,
-      s = i.appsToMount;
-  return It() ? (_t = !0, r = u.concat(c, a, s), p()) : (r = c, f());
+  var o = [];
+  return Ht() ? (Ct = !0, c()) : a();
 
-  function f() {
+  function i(t) {
+    return o.push.apply(o, e(t)), t;
+  }
+
+  function a() {
     return Promise.resolve().then(function () {
-      var t = c.map(z);
-      return Promise.all(t).then(m).then(function () {
+      var t = i(Ut()).map(ot);
+      return Promise.all(t).then(f).then(function () {
         return [];
       }).catch(function (t) {
-        throw m(), t;
+        throw f(), t;
       });
     });
   }
 
-  function p() {
+  function c() {
     return Promise.resolve().then(function () {
-      window.dispatchEvent(new o(0 === r.length ? "single-spa:before-no-app-change" : "single-spa:before-app-change", v(!0))), window.dispatchEvent(new o("single-spa:before-routing-event", v(!0)));
-      var n = u.map(ht),
-          e = a.map(L).map(function (t) {
-        return t.then(ht);
+      window.dispatchEvent(new u("single-spa:before-routing-event", l()));
+      var n = i(At()).map(bt),
+          r = i(Lt()).map($).map(function (t) {
+        return t.then(bt);
       }).concat(n),
-          i = Promise.all(e);
-      i.then(function () {
-        window.dispatchEvent(new o("single-spa:before-mount-routing-event", v(!0)));
+          e = Promise.all(r);
+      e.then(function () {
+        window.dispatchEvent(new u("single-spa:before-mount-routing-event", l()));
       });
-      var f = c.map(function (t) {
-        return z(t).then(function (t) {
-          return jt(t, i);
+      var a = i(Ut()),
+          c = a.map(function (t) {
+        return ot(t).then(function (t) {
+          return Kt(t, e);
         });
       }),
-          l = s.filter(function (t) {
-        return c.indexOf(t) < 0;
+          p = It().filter(function (t) {
+        return a.indexOf(t) < 0;
       }).map(function (t) {
-        return jt(t, i);
+        return o.push(t), Kt(t, e);
       });
-      return i.catch(function (t) {
-        throw m(), t;
+      return e.catch(function (t) {
+        throw f(), t;
       }).then(function () {
-        return m(), Promise.all(f.concat(l)).catch(function (n) {
+        return f(), Promise.all(c.concat(p)).catch(function (n) {
           throw t.forEach(function (t) {
             return t.reject(n);
           }), n;
-        }).then(h);
+        }).then(s);
       });
     });
   }
 
-  function h() {
-    var n = Et();
+  function s() {
+    var n = Nt();
     t.forEach(function (t) {
       return t.resolve(n);
     });
 
     try {
-      var e = 0 === r.length ? "single-spa:no-app-change" : "single-spa:app-change";
-      window.dispatchEvent(new o(e, v())), window.dispatchEvent(new o("single-spa:routing-event", v()));
+      var r = 0 === o.length ? "single-spa:no-app-change" : "single-spa:app-change";
+      window.dispatchEvent(new u(r, l())), window.dispatchEvent(new u("single-spa:routing-event", l()));
     } catch (t) {
       setTimeout(function () {
         throw t;
       });
     }
 
-    if (_t = !1, Dt.length > 0) {
-      var i = Dt;
-      Dt = [], Ut(i);
+    if (Ct = !1, Wt.length > 0) {
+      var e = Wt;
+      Wt = [], kt(e);
     }
 
     return n;
   }
 
-  function m() {
+  function f() {
     t.forEach(function (t) {
-      et(t.eventArguments);
-    }), et(n);
+      ft(t.eventArguments);
+    }), ft(n);
   }
 
-  function v() {
+  function l() {
     var t,
-        o = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        i = {},
-        f = (e(t = {}, w, []), e(t, d, []), e(t, l, []), e(t, T, []), t);
-    return o ? (c.concat(s).forEach(function (t, n) {
-      p(t, w);
-    }), u.forEach(function (t) {
-      p(t, l);
-    }), a.forEach(function (t) {
-      p(t, d);
-    })) : r.forEach(function (t) {
-      p(t);
+        e = {},
+        i = (r(t = {}, y, []), r(t, w, []), r(t, h, []), r(t, P, []), t);
+    return o.forEach(function (t) {
+      var n = U(t),
+          r = jt(n);
+      e[n] = r, (i[r] = i[r] || []).push(n);
     }), {
       detail: {
-        newAppStatuses: i,
-        appsByNewStatus: f,
-        totalAppChanges: r.length,
+        newAppStatuses: e,
+        appsByNewStatus: i,
+        totalAppChanges: o.length,
         originalEvent: null == n ? void 0 : n[0]
       }
     };
-
-    function p(t, n) {
-      var e = b(t);
-      n = n || Tt(e), i[e] = n, (f[n] = f[n] || []).push(e);
-    }
   }
 }
 
-function jt(t, n) {
-  return O(t) ? j(t).then(function (t) {
+function Kt(t, n) {
+  return _(t) ? W(t).then(function (t) {
     return n.then(function () {
-      return O(t) ? x(t) : t;
+      return _(t) ? F(t) : t;
     });
   }) : n.then(function () {
     return t;
   });
 }
 
-var Lt = !1;
+var Ft = !1;
 
-function Rt(t) {
+function Jt(t) {
   var n;
-  Lt = !0, t && t.urlRerouteOnly && (n = t.urlRerouteOnly, X = n), Y && Ut();
+  Ft = !0, t && t.urlRerouteOnly && (n = t.urlRerouteOnly, it = n), ut && kt();
 }
 
-function It() {
-  return Lt;
+function Ht() {
+  return Ft;
 }
 
-Y && setTimeout(function () {
-  Lt || console.warn(s(1, !1));
+ut && setTimeout(function () {
+  Ft || console.warn(l(1, !1));
 }, 5e3);
-var xt = {
+var Qt = {
   getRawAppData: function () {
-    return [].concat(wt);
+    return [].concat(St);
   },
-  reroute: Ut,
-  NOT_LOADED: l,
-  toLoadPromise: z,
-  toBootstrapPromise: j,
+  reroute: kt,
+  NOT_LOADED: h,
+  toLoadPromise: ot,
+  toBootstrapPromise: W,
   unregisterApplication: function (t) {
-    if (!wt.find(function (n) {
-      return b(n) === t;
-    })) throw Error(s(25, !1, t));
-    return bt(t).then(function () {
-      var n = wt.findIndex(function (n) {
-        return b(n) === t;
+    if (!St.find(function (n) {
+      return U(n) === t;
+    })) throw Error(l(25, !1, t));
+    return Rt(t).then(function () {
+      var n = St.findIndex(function (n) {
+        return U(n) === t;
       });
-      wt.splice(n, 1);
+      St.splice(n, 1);
     });
   }
 };
-Y && window.__SINGLE_SPA_DEVTOOLS__ && (window.__SINGLE_SPA_DEVTOOLS__.exposedMethods = xt);
+ut && window.__SINGLE_SPA_DEVTOOLS__ && (window.__SINGLE_SPA_DEVTOOLS__.exposedMethods = Qt);
 },{}],"node_modules/lodash/_arrayPush.js":[function(require,module,exports) {
 /**
  * Appends the elements of `values` to `array`.
@@ -21365,7 +21383,6 @@ function vueRender(_ref) {
     },
     mounted: function mounted() {
       // 注册一个观察者函数
-      console.log('da');
       console.log('actions', _actions.default);
 
       _actions.default.onGlobalStateChange(function (state, prevState) {
@@ -21425,19 +21442,17 @@ function genActiveRule(routerPrefix) {
   appContent: '',
   loading: true
 });
-var data = {
-  name: 'zj'
-};
 /**
  * Step2 注册子应用
  */
 
-(0, _qiankun.registerMicroApps)([{
-  name: 'react16',
-  entry: '//localhost:7100',
-  render: _VueRender.default,
-  activeRule: genActiveRule('/react16')
-}, {
+(0, _qiankun.registerMicroApps)([// {
+//   name: 'react16',
+//   entry: '//localhost:7100',
+//   render,
+//   activeRule: genActiveRule('/react16'),
+// },
+{
   name: 'react15',
   entry: '//localhost:7102',
   render: _VueRender.default,
@@ -21446,14 +21461,14 @@ var data = {
   name: 'vue',
   entry: '//localhost:7101',
   render: _VueRender.default,
-  activeRule: genActiveRule('/vue'),
-  props: data
-}, {
-  name: 'angular9',
-  entry: '//localhost:7103',
-  render: _VueRender.default,
-  activeRule: genActiveRule('/angular9')
-}], {
+  activeRule: genActiveRule('/vue')
+} // {
+//   name: 'angular9',
+//   entry: '//localhost:7103',
+//   render,
+//   activeRule: genActiveRule('/angular9'),
+// },
+], {
   beforeLoad: [function (app) {
     console.log('[LifeCycle] before load %c%s', 'color: green;', app.name);
   }],
@@ -21469,6 +21484,22 @@ var data = {
  */
 
 (0, _qiankun.setDefaultMountApp)('/vue');
+
+var _initGlobalState = (0, _qiankun.initGlobalState)({
+  user: 'qiankun'
+}),
+    onGlobalStateChange = _initGlobalState.onGlobalStateChange,
+    setGlobalState = _initGlobalState.setGlobalState;
+
+onGlobalStateChange(function (value, prev) {
+  return console.log('[onGlobalStateChange - master]:', value, prev);
+});
+setGlobalState({
+  ignore: 'master',
+  user: {
+    name: 'master'
+  }
+});
 /**
  * Step4 启动应用
  */
@@ -21511,7 +21542,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52711" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60749" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

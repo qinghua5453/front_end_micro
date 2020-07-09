@@ -20,7 +20,6 @@ function vueRender({ appContent, loading }) {
 
     mounted () {
       // 注册一个观察者函数
-      console.log('da')
       console.log('actions', actions)
       actions.onGlobalStateChange((state, prevState) => {
         // state: 变更后的状态; prevState: 变更前的状态

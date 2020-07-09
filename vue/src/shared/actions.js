@@ -15,6 +15,7 @@ class Actions {
      * 设置 actions
      */
     setActions(actions) {
+        console.log('actions', actions)
         this.actions = actions;
     }
 

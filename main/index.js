@@ -1,4 +1,4 @@
-import { registerMicroApps, start, setDefaultMountApp, runAfterFirstMounted } from 'qiankun';
+import { registerMicroApps, start, setDefaultMountApp, runAfterFirstMounted, initGlobalState } from 'qiankun';
 import render from './render/VueRender'
 
 
@@ -11,20 +11,18 @@ function genActiveRule(routerPrefix) {
  * Step1 初始化应用（可选）
  */
 render({ appContent: '', loading: true });
-let data = {
-  name: 'zj'
-}
+
 /**
  * Step2 注册子应用
  */
 registerMicroApps(
   [
-    {
-      name: 'react16',
-      entry: '//localhost:7100',
-      render,
-      activeRule: genActiveRule('/react16'),
-    },
+    // {
+    //   name: 'react16',
+    //   entry: '//localhost:7100',
+    //   render,
+    //   activeRule: genActiveRule('/react16'),
+    // },
     {
       name: 'react15',
       entry: '//localhost:7102',
@@ -35,15 +33,14 @@ registerMicroApps(
       name: 'vue',
       entry: '//localhost:7101',
       render,
-      activeRule: genActiveRule('/vue'),
-      props: data
+      activeRule: genActiveRule('/vue'),  
     },
-    {
-      name: 'angular9',
-      entry: '//localhost:7103',
-      render,
-      activeRule: genActiveRule('/angular9'),
-    },
+    // {
+    //   name: 'angular9',
+    //   entry: '//localhost:7103',
+    //   render,
+    //   activeRule: genActiveRule('/angular9'),
+    // },
   ],
   {
     beforeLoad: [
@@ -68,6 +65,20 @@ registerMicroApps(
  * Step3 设置默认进入的子应用
  */
 setDefaultMountApp('/vue');
+
+
+const { onGlobalStateChange, setGlobalState } = initGlobalState({
+  user: 'qiankun',
+});
+
+onGlobalStateChange((value, prev) => console.log('[onGlobalStateChange - master]:', value, prev));
+
+setGlobalState({
+  ignore: 'master',
+  user: {
+    name: 'master',
+  },
+});
 
 /**
  * Step4 启动应用
